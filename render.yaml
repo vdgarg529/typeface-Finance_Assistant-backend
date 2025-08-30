@@ -10,3 +10,5 @@ services:
         value: sqlite:///./finance_assistant.db
       - key: SECRET_KEY
         generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: https://your-frontend-domain.vercel.app,http://localhost:3000

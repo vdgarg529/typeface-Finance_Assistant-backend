@@ -6,7 +6,7 @@ services:
       - "8000:8000"
     environment:
       - DATABASE_URL=sqlite:///./finance_assistant.db
-      - SECRET_KEY=your-secret-key
-      - ALLOWED_ORIGINS=http://localhost:3000
+      - SECRET_KEY=asdfghjkl;
+      - ALLOWED_ORIGINS=https://typefacefinance-assistant.vercel.app,http://localhost:3000,http://localhost:8000
     volumes:
       - ./:/app

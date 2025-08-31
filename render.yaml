@@ -15,5 +15,5 @@ services:
         value: HS256
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: 30
-      - key: ALLOWED_ORIGINS
-        value: https://your-frontend-domain.com
+      - key: https://typefacefinance-assistant.vercel.app,http://localhost:3000,http://localhost:8000
+        value: https://typefacefinance-assistant.vercel.app/login

@@ -1,15 +1,19 @@
 services:
   - type: web
-    name: personal-finance-assistant
+    name: finance-assistant
     env: docker
     plan: free
     dockerfilePath: Dockerfile
     envVars:
       - key: DATABASE_URL
-        value: sqlite:///./finance_assistant.db
-      - key: SECRET_KEY
+        fromDatabase:
+          name: finance_db
+          property: connectionString
+      - key: asdfghjkl;
         generateValue: true
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 30
       - key: ALLOWED_ORIGINS
-        value: https://your-frontend-domain.vercel.app,http://localhost:3000
-    healthCheckPath: /health
-    autoDeploy: true
+        value: https://your-frontend-domain.com

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./finance_assistant.db
+      - SECRET_KEY=local-test-secret-key-change-in-production
+      - ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8000
+    volumes:
+      - ./uploads:/app/uploads
